@@ -6,9 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace GenerateCoverageReportWithAction.CSharp.Demo
 {
-    static class Program
+    public static class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
                 .AddTransient<IService, SimulateService>()
@@ -17,10 +17,14 @@ namespace GenerateCoverageReportWithAction.CSharp.Demo
 
             var simulateController = serviceProvider.GetRequiredService<SimulateController>();
 
-            // input = A，output = B
-            // input != A，output = C
-            Console.WriteLine(simulateController.GetOutput("A"));
-            Console.WriteLine(simulateController.GetOutput("B"));
+            if (args.Length > 0)
+            {
+                var input = args[0];
+
+                // input = A，output = B
+                // input != A，output = C
+                Console.WriteLine(simulateController.GetOutput(input));
+            }
         }
     }
 }
