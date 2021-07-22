@@ -1,6 +1,6 @@
 using GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces;
 
-namespace GenerateCoverageReportWithAction.CSharp.Demo.Services.Implements
+namespace GenerateCoverageReportWithAction.CSharp.Demo.Services
 {
     public class SimulateService : IService
     {

@@ -1,6 +1,6 @@
 using System;
 using GenerateCoverageReportWithAction.CSharp.Demo.Controllers;
-using GenerateCoverageReportWithAction.CSharp.Demo.Services.Implements;
+using GenerateCoverageReportWithAction.CSharp.Demo.Services;
 using GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
