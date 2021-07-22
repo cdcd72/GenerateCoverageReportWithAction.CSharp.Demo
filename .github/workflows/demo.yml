@@ -23,7 +23,7 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
       - name: Test
-        run: dotnet test --no-restore --collect:"XPlat Code Coverage"
+        run: dotnet test --no-restore --results-directory:"test/TestResults" --collect:"XPlat Code Coverage"
       - name: Generate code coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@4.8.10
         with:
