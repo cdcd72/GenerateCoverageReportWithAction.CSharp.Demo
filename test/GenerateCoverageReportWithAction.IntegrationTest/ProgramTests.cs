@@ -11,28 +11,30 @@ namespace GenerateCoverageReportWithAction.IntegrationTest
         public void GetOutputWithBResult()
         {
             // Arrange
-            using var output = new StringWriter();
-            Console.SetOut(output);
+            using var sw = new StringWriter();
+
+            Console.SetOut(sw);
 
             // Act
             Program.Main(new string[] { "A" });
 
             // Assert
-            Assert.AreEqual("B", $"{output}".Trim());
+            Assert.AreEqual("B", $"{sw}".Trim());
         }
 
         [Test]
         public void GetOutputWithCResult()
         {
             // Arrange
-            using var output = new StringWriter();
-            Console.SetOut(output);
+            using var sw = new StringWriter();
+
+            Console.SetOut(sw);
 
             // Act
             Program.Main(new string[] { "B" });
 
             // Assert
-            Assert.AreEqual("C", $"{output}".Trim());
+            Assert.AreEqual("C", $"{sw}".Trim());
         }
     }
 }

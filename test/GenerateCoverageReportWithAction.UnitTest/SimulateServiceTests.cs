@@ -9,10 +9,10 @@ namespace GenerateCoverageReportWithAction.UnitTest
         public void GetOutputWithBResult()
         {
             // Arrange
-            var simulateController = new SimulateService();
+            var simulateService = new SimulateService();
 
             // Act
-            var output = simulateController.GetOutput("A");
+            var output = simulateService.GetOutput("A");
 
             // Assert
             Assert.AreEqual("B", output);
@@ -22,10 +22,10 @@ namespace GenerateCoverageReportWithAction.UnitTest
         public void GetOutputWithCResult()
         {
             // Arrange
-            var simulateController = new SimulateService();
+            var simulateService = new SimulateService();
 
             // Act
-            var output = simulateController.GetOutput("B");
+            var output = simulateService.GetOutput("B");
 
             // Assert
             Assert.AreEqual("C", output);
