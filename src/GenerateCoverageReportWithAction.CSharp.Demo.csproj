@@ -9,4 +9,13 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>GenerateCoverageReportWithAction.IntegrationTest</_Parameter1>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+      <_Parameter1>GenerateCoverageReportWithAction.UnitTest</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
 </Project>
