@@ -23,7 +23,7 @@ namespace GenerateCoverageReportWithAction.CSharp.Demo
 
                 // input = A，output = B
                 // input != A，output = C
-                Console.WriteLine(simulateController.GetOutput(input));
+                Console.Write(simulateController.GetOutput(input));
             }
         }
     }

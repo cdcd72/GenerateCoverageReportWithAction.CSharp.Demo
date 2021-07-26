@@ -19,7 +19,7 @@ namespace GenerateCoverageReportWithAction.IntegrationTest
             Program.Main(new string[] { "A" });
 
             // Assert
-            Assert.AreEqual("B", $"{sw}".Trim());
+            Assert.AreEqual("B", $"{sw}");
         }
 
         [Test]
@@ -34,7 +34,7 @@ namespace GenerateCoverageReportWithAction.IntegrationTest
             Program.Main(new string[] { "B" });
 
             // Assert
-            Assert.AreEqual("C", $"{sw}".Trim());
+            Assert.AreEqual("C", $"{sw}");
         }
     }
 }
