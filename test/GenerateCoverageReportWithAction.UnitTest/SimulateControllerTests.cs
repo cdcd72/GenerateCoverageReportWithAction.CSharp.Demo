@@ -8,7 +8,7 @@ namespace GenerateCoverageReportWithAction.UnitTest
     public class SimulateControllerTests
     {
         [Test]
-        public void GetOutputWithBResult()
+        public void GetOutputWithAInput()
         {
             // Arrange
             var mockService = new Mock<IService>();
@@ -27,7 +27,7 @@ namespace GenerateCoverageReportWithAction.UnitTest
         }
 
         [Test]
-        public void GetOutputWithCResult()
+        public void GetOutputWithBInput()
         {
             // Arrange
             var mockService = new Mock<IService>();
