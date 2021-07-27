@@ -6,7 +6,7 @@ namespace GenerateCoverageReportWithAction.UnitTest
     public class SimulateServiceTests
     {
         [Test]
-        public void GetOutputWithBResult()
+        public void GetOutputWithAInput()
         {
             // Arrange
             var simulateService = new SimulateService();
@@ -19,7 +19,7 @@ namespace GenerateCoverageReportWithAction.UnitTest
         }
 
         [Test]
-        public void GetOutputWithCResult()
+        public void GetOutputWithBInput()
         {
             // Arrange
             var simulateService = new SimulateService();

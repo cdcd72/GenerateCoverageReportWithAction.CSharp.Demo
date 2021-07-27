@@ -8,7 +8,7 @@ namespace GenerateCoverageReportWithAction.IntegrationTest
     public class ProgramTests
     {
         [Test]
-        public void GetOutputWithBResult()
+        public void GetOutputWithAInput()
         {
             // Arrange
             using var sw = new StringWriter();
@@ -23,7 +23,7 @@ namespace GenerateCoverageReportWithAction.IntegrationTest
         }
 
         [Test]
-        public void GetOutputWithCResult()
+        public void GetOutputWithBInput()
         {
             // Arrange
             using var sw = new StringWriter();
