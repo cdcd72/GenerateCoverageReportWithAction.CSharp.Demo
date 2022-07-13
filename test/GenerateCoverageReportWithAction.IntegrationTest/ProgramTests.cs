@@ -3,38 +3,37 @@ using System.IO;
 using GenerateCoverageReportWithAction.CSharp.Demo;
 using NUnit.Framework;
 
-namespace GenerateCoverageReportWithAction.IntegrationTest
+namespace GenerateCoverageReportWithAction.IntegrationTest;
+
+public class ProgramTests
 {
-    public class ProgramTests
+    [Test]
+    public void GetOutputWithAInput()
     {
-        [Test]
-        public void GetOutputWithAInput()
-        {
-            // Arrange
-            using var sw = new StringWriter();
+        // Arrange
+        using var sw = new StringWriter();
 
-            Console.SetOut(sw);
+        Console.SetOut(sw);
 
-            // Act
-            Program.Main(new string[] { "A" });
+        // Act
+        Program.Main(new[] { "A" });
 
-            // Assert
-            Assert.AreEqual("B", $"{sw}");
-        }
+        // Assert
+        Assert.AreEqual("B", $"{sw}");
+    }
 
-        [Test]
-        public void GetOutputWithBInput()
-        {
-            // Arrange
-            using var sw = new StringWriter();
+    [Test]
+    public void GetOutputWithBInput()
+    {
+        // Arrange
+        using var sw = new StringWriter();
 
-            Console.SetOut(sw);
+        Console.SetOut(sw);
 
-            // Act
-            Program.Main(new string[] { "B" });
+        // Act
+        Program.Main(new[] { "B" });
 
-            // Assert
-            Assert.AreEqual("C", $"{sw}");
-        }
+        // Assert
+        Assert.AreEqual("C", $"{sw}");
     }
 }
