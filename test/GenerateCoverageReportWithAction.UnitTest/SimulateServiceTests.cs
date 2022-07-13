@@ -1,34 +1,33 @@
 using GenerateCoverageReportWithAction.CSharp.Demo.Services;
 using NUnit.Framework;
 
-namespace GenerateCoverageReportWithAction.UnitTest
+namespace GenerateCoverageReportWithAction.UnitTest;
+
+public class SimulateServiceTests
 {
-    public class SimulateServiceTests
+    [Test]
+    public void GetOutputWithAInput()
     {
-        [Test]
-        public void GetOutputWithAInput()
-        {
-            // Arrange
-            var simulateService = new SimulateService();
+        // Arrange
+        var simulateService = new SimulateService();
 
-            // Act
-            var output = simulateService.GetOutput("A");
+        // Act
+        var output = simulateService.GetOutput("A");
 
-            // Assert
-            Assert.AreEqual("B", output);
-        }
+        // Assert
+        Assert.AreEqual("B", output);
+    }
 
-        [Test]
-        public void GetOutputWithBInput()
-        {
-            // Arrange
-            var simulateService = new SimulateService();
+    [Test]
+    public void GetOutputWithBInput()
+    {
+        // Arrange
+        var simulateService = new SimulateService();
 
-            // Act
-            var output = simulateService.GetOutput("B");
+        // Act
+        var output = simulateService.GetOutput("B");
 
-            // Assert
-            Assert.AreEqual("C", output);
-        }
+        // Assert
+        Assert.AreEqual("C", output);
     }
 }

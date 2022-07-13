@@ -1,7 +1,6 @@
-namespace GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces
+namespace GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces;
+
+public interface IService
 {
-    public interface IService
-    {
-        string GetOutput(string input);
-    }
+    string GetOutput(string input);
 }
