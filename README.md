@@ -18,12 +18,3 @@ To practice generate code coverage report with github action.
 
 3. Then deep into completed dev workflow page, you can download code coverage report.
     > ![Image](img/example2.jpg)
-
-## 最後版本
-
-1.0.0.0 (July 22, 2021)
-
-## 記錄
-
--   1.0.0.0
-    -   Initial Commit (初次上版)
