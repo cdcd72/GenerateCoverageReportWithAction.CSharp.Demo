@@ -4,27 +4,26 @@ using GenerateCoverageReportWithAction.CSharp.Demo.Services;
 using GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace GenerateCoverageReportWithAction.CSharp.Demo
+namespace GenerateCoverageReportWithAction.CSharp.Demo;
+
+internal static class Program
 {
-    static class Program
+    internal static void Main(string[] args)
     {
-        internal static void Main(string[] args)
+        var serviceProvider = new ServiceCollection()
+            .AddTransient<IService, SimulateService>()
+            .AddTransient<SimulateController>()
+            .BuildServiceProvider();
+
+        var simulateController = serviceProvider.GetRequiredService<SimulateController>();
+
+        if (args.Length > 0)
         {
-            var serviceProvider = new ServiceCollection()
-                .AddTransient<IService, SimulateService>()
-                .AddTransient<SimulateController>()
-                .BuildServiceProvider();
+            var input = args[0];
 
-            var simulateController = serviceProvider.GetRequiredService<SimulateController>();
-
-            if (args.Length > 0)
-            {
-                var input = args[0];
-
-                // input = A，output = B
-                // input != A，output = C
-                Console.Write(simulateController.GetOutput(input));
-            }
+            // input = A，output = B
+            // input != A，output = C
+            Console.Write(simulateController.GetOutput(input));
         }
     }
 }
