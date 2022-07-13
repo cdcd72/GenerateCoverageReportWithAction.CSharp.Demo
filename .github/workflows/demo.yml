@@ -33,3 +33,4 @@ jobs:
         with:
           name: CoverageReport
           path: "./test/TestResults/CoverageReport"
+          retention-days: 7
