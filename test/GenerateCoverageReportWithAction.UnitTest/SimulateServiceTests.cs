@@ -15,7 +15,7 @@ public class SimulateServiceTests
         var output = simulateService.GetOutput("A");
 
         // Assert
-        Assert.AreEqual("B", output);
+        Assert.That(output, Is.EqualTo("B"));
     }
 
     [Test]
@@ -28,6 +28,6 @@ public class SimulateServiceTests
         var output = simulateService.GetOutput("B");
 
         // Assert
-        Assert.AreEqual("C", output);
+        Assert.That(output, Is.EqualTo("C"));
     }
 }

@@ -16,10 +16,10 @@ public class ProgramTests
         Console.SetOut(sw);
 
         // Act
-        Program.Main(new[] { "A" });
+        Program.Main(["A"]);
 
         // Assert
-        Assert.AreEqual("B", $"{sw}");
+        Assert.That($"{sw}", Is.EqualTo("B"));
     }
 
     [Test]
@@ -31,9 +31,9 @@ public class ProgramTests
         Console.SetOut(sw);
 
         // Act
-        Program.Main(new[] { "B" });
+        Program.Main(["B"]);
 
         // Assert
-        Assert.AreEqual("C", $"{sw}");
+        Assert.That($"{sw}", Is.EqualTo("C"));
     }
 }
