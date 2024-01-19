@@ -23,7 +23,7 @@ public class SimulateControllerTests
         var output = simulateController.GetOutput("A");
 
         // Assert
-        Assert.AreEqual("B", output);
+        Assert.That(output, Is.EqualTo("B"));
     }
 
     [Test]
@@ -42,6 +42,6 @@ public class SimulateControllerTests
         var output = simulateController.GetOutput("B");
 
         // Assert
-        Assert.AreEqual("C", output);
+        Assert.That(output, Is.EqualTo("C"));
     }
 }

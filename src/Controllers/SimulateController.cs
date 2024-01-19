@@ -2,11 +2,7 @@ using GenerateCoverageReportWithAction.CSharp.Demo.Services.Interfaces;
 
 namespace GenerateCoverageReportWithAction.CSharp.Demo.Controllers;
 
-public class SimulateController
+public class SimulateController(IService service)
 {
-    private readonly IService service;
-
-    public SimulateController(IService service) => this.service = service;
-
     public string GetOutput(string input) => service.GetOutput(input);
 }
