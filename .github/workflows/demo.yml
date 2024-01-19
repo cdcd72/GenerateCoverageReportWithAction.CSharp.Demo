@@ -2,7 +2,7 @@ name: GenerateCoverageReportWithAction Dev Workflow
 
 on:
   push:
-    branches: [develop, feature/*, fix/*, improve/*]
+    branches: [feature/*, fix/*, improve/*]
 
 jobs:
   test:
